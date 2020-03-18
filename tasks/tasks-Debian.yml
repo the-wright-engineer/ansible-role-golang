@@ -4,6 +4,7 @@
   apt:
     pkg: [ 'curl', 'gcc', 'git', 'findutils', 'make', 'rsync', 'tar' ]
     state: present
+  become: yes
   register: apt_result
   until: apt_result is success
   retries: 1
